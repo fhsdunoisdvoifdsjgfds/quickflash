@@ -19,7 +19,7 @@ class OnboardPage extends StatefulWidget {
 class _OnboardPageState extends State<OnboardPage> {
   int page = 1;
 
-  String title = 'Welcome to\nKing Billy';
+  String title = 'Welcome to\nQuick Flash Garage';
   String desc =
       'Immerse yourself in the world of cars and everything that goes with them. Find out the information you want to know directly from this app.';
 
@@ -27,7 +27,7 @@ class _OnboardPageState extends State<OnboardPage> {
     page = index;
     setState(() {
       if (index == 1) {
-        title = 'Welcome to\nKing Billy';
+        title = 'Welcome to\nQuick Flash Garage';
         desc =
             'Immerse yourself in the world of cars and everything that goes with them. Find out the information you want to know directly from this app.';
       } else if (index == 2) {
