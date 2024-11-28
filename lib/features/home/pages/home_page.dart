@@ -1,3 +1,4 @@
+import 'package:app_tracking_transparency/app_tracking_transparency.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_svg/flutter_svg.dart';
@@ -29,7 +30,19 @@ class _HomePageState extends State<HomePage> {
   @override
   void initState() {
     super.initState();
+    tracking();
     context.read<RewardBloc>().add(CheckRewardEvent());
+  }
+
+  Future<void> tracking() async {
+    final TrackingStatus status =
+        await AppTrackingTransparency.trackingAuthorizationStatus;
+    if (status == TrackingStatus.notDetermined) {
+      await AppTrackingTransparency.requestTrackingAuthorization();
+    } else if (status == TrackingStatus.denied ||
+        status == TrackingStatus.restricted) {
+      await AppTrackingTransparency.requestTrackingAuthorization();
+    }
   }
 
   @override

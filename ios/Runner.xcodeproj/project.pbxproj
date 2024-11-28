@@ -15,6 +15,10 @@
 		97C146FC1CF9000F007C117D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FA1CF9000F007C117D /* Main.storyboard */; };
 		97C146FE1CF9000F007C117D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FD1CF9000F007C117D /* Assets.xcassets */; };
 		97C147011CF9000F007C117D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 97C146FF1CF9000F007C117D /* LaunchScreen.storyboard */; };
+		A3591F8B2CF883ED00562689 /* iAd.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3591F8A2CF883ED00562689 /* iAd.framework */; };
+		A3591F8D2CF8841100562689 /* AdServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3591F8C2CF8841100562689 /* AdServices.framework */; };
+		A3591F8F2CF8841700562689 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3591F8E2CF8841700562689 /* AdSupport.framework */; };
+		A3591F912CF8841E00562689 /* AppTrackingTransparency.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A3591F902CF8841E00562689 /* AppTrackingTransparency.framework */; };
 		E670A7A4E0139E072BA598EC /* Pods_RunnerTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E5A7709565ACE04DCC30AB15 /* Pods_RunnerTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -60,6 +64,10 @@
 		97C147001CF9000F007C117D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		97C147021CF9000F007C117D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		A30774622CCA5D9A000D2DD7 /* Runner.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Runner.entitlements; sourceTree = "<group>"; };
+		A3591F8A2CF883ED00562689 /* iAd.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = iAd.framework; path = System/Library/Frameworks/iAd.framework; sourceTree = SDKROOT; };
+		A3591F8C2CF8841100562689 /* AdServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdServices.framework; path = System/Library/Frameworks/AdServices.framework; sourceTree = SDKROOT; };
+		A3591F8E2CF8841700562689 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		A3591F902CF8841E00562689 /* AppTrackingTransparency.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppTrackingTransparency.framework; path = System/Library/Frameworks/AppTrackingTransparency.framework; sourceTree = SDKROOT; };
 		A77383B50AD3F857FE6921FA /* Pods-Runner.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.release.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.release.xcconfig"; sourceTree = "<group>"; };
 		BB9E1BAED88D0E5CABEC1AC2 /* Pods_Runner.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Runner.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB17B6D46531D09FD6AC5482 /* Pods-Runner.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Runner.debug.xcconfig"; path = "Target Support Files/Pods-Runner/Pods-Runner.debug.xcconfig"; sourceTree = "<group>"; };
@@ -81,7 +89,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A3591F912CF8841E00562689 /* AppTrackingTransparency.framework in Frameworks */,
 				1D23DBB59F8C93DB12F50618 /* Pods_Runner.framework in Frameworks */,
+				A3591F8F2CF8841700562689 /* AdSupport.framework in Frameworks */,
+				A3591F8B2CF883ED00562689 /* iAd.framework in Frameworks */,
+				A3591F8D2CF8841100562689 /* AdServices.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -91,6 +103,10 @@
 		18191A0147DE03433E882A8D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				A3591F902CF8841E00562689 /* AppTrackingTransparency.framework */,
+				A3591F8E2CF8841700562689 /* AdSupport.framework */,
+				A3591F8C2CF8841100562689 /* AdServices.framework */,
+				A3591F8A2CF883ED00562689 /* iAd.framework */,
 				BB9E1BAED88D0E5CABEC1AC2 /* Pods_Runner.framework */,
 				E5A7709565ACE04DCC30AB15 /* Pods_RunnerTests.framework */,
 			);
@@ -200,6 +216,7 @@
 				9705A1C41CF9048500538489 /* Embed Frameworks */,
 				3B06AD1E1E4923F5004D2608 /* Thin Binary */,
 				49B709C20A05A32D8D47057F /* [CP] Embed Pods Frameworks */,
+				3ED67CCDC8A16C22F184C3C9 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -286,6 +303,23 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "/bin/sh \"$FLUTTER_ROOT/packages/flutter_tools/bin/xcode_backend.sh\" embed_and_thin";
+		};
+		3ED67CCDC8A16C22F184C3C9 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Runner/Pods-Runner-resources-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Copy Pods Resources";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Runner/Pods-Runner-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Runner/Pods-Runner-resources.sh\"\n";
+			showEnvVarsInLog = 0;
 		};
 		49B709C20A05A32D8D47057F /* [CP] Embed Pods Frameworks */ = {
 			isa = PBXShellScriptBuildPhase;
